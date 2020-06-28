@@ -1,1 +1,8 @@
-<p>to-do works!</p>
+<div class="items" *ngIf="!loading">
+  <div class="item" *ngFor="let todo of ToDoService.toDo; let i = index">
+      <input type="checkbox" [checked]="todo.completed">
+      <p id="{{i + 1}}">{{todo.title}}</p>
+    <button id="delete" (click)="deleteToDo(todo.id)">╳</button>
+  </div>
+</div>
+<p *ngIf="loading" class="preloader">load..................</p>  

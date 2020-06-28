@@ -1,0 +1,109 @@
+$gray: #dcdcdc
+$submit: #00FF33
+$red: #F5A9A9
+$darken: #575757
+*
+  font-family: 'Roboto', sans-serif
+  box-sizing: border-box
+.items
+  display: flex
+  flex-direction: column
+  border-left: 1px solid $gray
+  border-right: 1px solid $gray
+.item
+  display: flex
+  align-items: center
+  border-bottom: 1px solid $gray
+  background: transparent
+  padding: 15px 0 15px 15px
+  position: relative
+  p
+    display: inline
+    margin: 0
+    font-size: 18px
+    color: $darken
+    text-align: left
+    max-width: 420px
+    cursor: default
+    
+  input[type="checkbox"]
+    margin: 0 15px 0 0
+    border: none
+    display: inline-block
+    padding: 0
+    -webkit-appearance: none
+    -moz-appearance: none
+    height: 21px
+    width: 21px
+    outline: none
+    vertical-align: top
+    position: relative
+    border-radius: 7px
+    &:after 
+      content: ''
+      display: block
+      width: 10px
+      height: 18px
+      border: 2px solid $gray
+      border-top: none
+      border-left: none
+      left: 7px
+      top: -1px
+      transform: rotate(45deg)
+      position: absolute
+      transition: all 0.3s
+    &:hover
+      &::after
+        content: ''
+        display: block
+        width: 10px
+        height: 18px
+        border: 2px solid lighten($submit, 20%)
+        border-top: none
+        border-left: none
+        left: 7px
+        top: -1px
+        transform: rotate(45deg)
+        position: absolute
+        transition: all 0.3s
+    &:checked
+      background: transparent
+      &::after
+        width: 10px
+        height: 18px
+        border: 2px solid $submit
+        border-top: none
+        border-left: none
+        left: 7px
+        top: -1px
+        transform: rotate(45deg)
+        transition: all 0.3s
+    &:checked + p
+      text-decoration: line-through
+      text-decoration-color: $darken
+  button
+    position: absolute
+    right: 0
+    width: 18px
+    height: 18px
+    display: flex
+    opacity: 0
+    border: none
+    background: none
+    font-size: 14px
+    margin: 0
+    padding: 0
+    color: $red
+    cursor: pointer
+    transition: all 0.4s
+    &:hover
+      color: darken($red, 20%)
+    &:focus
+      outline: inherit
+  &:hover
+    transition: all 0.4s
+    button
+      opacity: 1
+      transform: translateX(-15px)
+    p
+      color: darken($darken, 30%)
