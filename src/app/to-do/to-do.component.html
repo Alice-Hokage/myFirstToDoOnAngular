@@ -1,8 +1,8 @@
 <div class="items" *ngIf="!loading">
-  <div class="item" *ngFor="let todo of ToDoService.toDo; let i = index">
+  <div class="item" *ngFor="let todo of ToDoService.toDo; let i = index" [@openClose]="deleteTask ? 'open' : 'closed'">
       <input type="checkbox" [checked]="todo.completed">
       <p id="{{i + 1}}">{{todo.title}}</p>
-    <button id="delete" (click)="deleteToDo(todo.id)">╳</button>
+    <button id="delete" (click)="deleteToDo(todo.id); delete()">╳</button>
   </div>
 </div>
 <p *ngIf="loading" class="preloader">load..................</p>  

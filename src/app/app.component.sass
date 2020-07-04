@@ -1,14 +1,75 @@
+$gray: #dcdcdc
+$submit: #00FF33
+$red: #F5A9A9
 $darken: #575757
 *
   font-family: 'Roboto', sans-serif
   box-sizing: border-box
-h1
-    text-align: center
-    margin: 10px 0 0 0 
-    color: $darken
 .container
-  max-width: 500px
-  margin: 0 auto 5rem auto
-  border-radius: 3px
-  font-family: 'Roboto', sans-serif
-  font-weight: 100
+  height: 100%
+  overflow: hidden
+  .container-todo
+    display: flex
+    justify-content: flex-start
+    flex-direction: column
+    max-width: 500px
+    height: 100vh
+    margin: 40px  auto 40px auto
+    padding: 0 20px 0 20px
+    font-family: 'Roboto', sans-serif
+    font-weight: 100
+    overflow: auto
+    h1
+      font-size: 32px
+      text-align: center
+      margin: 0
+      color: $darken
+  .hello
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background-color: transparent
+    height: 100vh
+    width: 100%
+    margin: 0
+    position: absolute
+    
+    h1
+      margin: 0
+      padding: 0
+      font-weight: 100
+      font-size: 54px
+      color: $darken
+      cursor: default
+      vertical-align: middle
+      text-align: center
+      opacity: 0
+      animation: addTitle 2s 1
+      animation-fill-mode: forwards
+      animation-delay: 0.6s
+      @keyframes addTitle
+        0%
+          opacity: 0
+          transform: translateY(-200%)
+        100%
+          transform: translateY(0)
+          opacity: 1
+    p
+      margin: 15px 0 0 0 
+      padding: 0
+      font-size: 24px
+      color: darken($gray, 30% )
+      opacity: 0
+      animation: addText 2s 1
+      animation-fill-mode: forwards
+      animation-delay: 2s
+      cursor: default
+      @keyframes addText
+        0%
+          opacity: 0
+          transform: translateY(200%)
+        100%
+          opacity: 1
+          transform: translateY(0)
+

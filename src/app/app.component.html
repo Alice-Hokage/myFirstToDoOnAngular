@@ -1,5 +1,11 @@
-<h1>{{titleApp}}</h1>
 <div class="container">
-  <app-to-do-form></app-to-do-form>
-  <app-to-do></app-to-do>
+  <div class="hello"  [@myInsertRemoveTrigger]="isOpen" (click)="toggle()">
+    <h1>Hi, this my first ToDo aplication</h1>
+    <p>Click to start</p>
+  </div>
+  <section class="container-todo" [@openLIstToDO]="Todo">
+    <h1>{{titleApp}}</h1>
+    <app-to-do-form></app-to-do-form>
+    <app-to-do></app-to-do>
+  </section>
 </div>

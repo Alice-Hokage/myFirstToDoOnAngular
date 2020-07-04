@@ -1,5 +1,5 @@
 $gray: #dcdcdc
-$submit: #00FF33
+$submit: #00FF33	
 $red: #F5A9A9
 $darken: #575757
 *
@@ -19,6 +19,7 @@ $darken: #575757
   position: relative
   p
     display: inline
+    padding: 0 5px 0 5px
     margin: 0
     font-size: 18px
     color: $darken
@@ -80,17 +81,18 @@ $darken: #575757
         transition: all 0.3s
     &:checked + p
       text-decoration: line-through
-      text-decoration-color: $darken
+      text-decoration-color: $gray
+      color: $gray
   button
     position: absolute
     right: 0
-    width: 18px
-    height: 18px
+    width: 15px
+    height: 15px
     display: flex
     opacity: 0
     border: none
     background: none
-    font-size: 14px
+    font-size: 11px
     margin: 0
     padding: 0
     color: $red
