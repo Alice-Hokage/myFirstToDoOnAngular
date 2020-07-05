@@ -9,10 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": false,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
+  "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.9",
     "@angular/common": "~9.1.9",
