@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ToDo": {
+    "f": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ToDo",
+            "outputPath": "dist/f",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ToDo:build"
+            "browserTarget": "f:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ToDo:build:production"
+              "browserTarget": "f:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ToDo:build"
+            "browserTarget": "f:build"
           }
         },
         "test": {
@@ -114,15 +114,23 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ToDo:serve"
+            "devServerTarget": "f:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ToDo:serve:production"
+              "devServerTarget": "f:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "ToDo"
+    }
+  },
+  "defaultProject": "f",
+  "cli": {
+    "analytics": "acda08e5-163b-44f4-8f02-ed72d35bf1a3"
+  }
 }
